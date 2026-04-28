@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="RocketCake">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="rc_images/rc_global.css?h=6f904107">
+	<link rel="stylesheet" type="text/css" href="rc_images/rc_global.css?h=fe402f6f">
 </head>
 <body class="body_about_us_html">
 <div class="textstyle1">
-<div id="html_52562ad5"><!-- RocketCake Friendly Navigation Menu -->
+<img src="rc_images/luxe.gif" width="800" height="800" id="img_52958ea5" alt="" title="" /><div id="html_52562ad5"><!-- RocketCake Friendly Navigation Menu -->
 <style>
   .auravene-nav {
     display: flex;
@@ -74,7 +74,7 @@
 </style>
 
 <div class="auravene-nav">
-  <div class="nav-logo">Auravene</div>
+  <div class="nav-logo"></div>
 
   <ul class="nav-links">
     <li><a href="index.html" >Home</a></li>
@@ -291,6 +291,31 @@
       </div>
     </div>
 </div>
+<div style="clear:both"></div></div></div><div id="container_5ad1743c"><div id="container_5ad1743c_padding" ><div class="textstyle1"><div id="elem_16337b5f"  style="position:absolute; left:32%; top:10%; width:34%; height:320px; min-width:350px; background-color:#E5E5E5; " ><form action="about_us.html" enctype="application/x-www-form-urlencoded" method="POST">  <div id="text_1d0e9860">
+    <div class="textstyle2">
+<span class="textstyle27"><br/>Contact Form<br/><br/></span><div id="container_7446523"><div id="container_7446523_padding" ><div class="textstyle1"><span class="textstyle27"><br/></span><label id="label_594abb12" for="edit_2218d2b4">Name:</label><input type="text" value="" title="" name="NameField" required="required"  id="edit_2218d2b4" >
+<span class="textstyle27"><br/><br/></span><label id="label_3d782f09" for="edit_7e4f3457">Email:</label><input type="text" value="" title="" name="EmailField" required="required"  id="edit_7e4f3457" >
+<span class="textstyle27"><br/><br/></span><textarea name="TextField" title="" required="required" cols="20" rows="4"  id="edit_8033757"></textarea>
+<span class="textstyle27"><br/><br/></span><label id="label_741b1441" for="edit_8033757">Text:</label></div>
+<div style="clear:both"></div></div></div><span class="textstyle27"><br/><br/></span><input name="Button1" type="submit" value="Send" title=""  id="button_105956d6" >
+      </div>
+    </div>
+</form>
+<?PHP
+$text = "";
+foreach($_POST as $name => $value)
+{
+   $text .= "$name : $value\n";
+}
+if ($text != "")
+{
+  echo 'Thanks for contacting us';
+  echo '<script type="text/javascript">var e = document.getElementById("elem_16337b5f"); e.firstChild.style.display = "none";</script>';
+  $headers = "Content-Type: text/plain; charset=UTF-8";
+  mail("email@example.com", "Contact form request", $text, $headers);
+}
+?>
+</div></div>
 <div style="clear:both"></div></div></div><div id="container_15f9c727"><div id="container_15f9c727_padding" ><div class="textstyle1">  <div id="text_1b166e26">
     <div class="textstyle1">
       <span class="textstyle20">AURAVENE</span>
@@ -313,12 +338,12 @@
     </div>
   <div id="text_71fbe97c">
     <div class="textstyle1">
-      <span class="textstyle18">Home</span>
+      <span class="textstyle18"><a href="index.html">Home</a></span>
       </div>
     </div>
   <div id="text_80e4e6e">
     <div class="textstyle1">
-      <span class="textstyle18">Clothing</span>
+      <span class="textstyle18"><a href="clothing.html">Clothing</a></span>
       </div>
     </div>
   <div id="text_e90d421">
@@ -333,9 +358,9 @@
     </div>
   <div id="text_efa682">
     <div class="textstyle1">
-      <span class="textstyle18">About</span>
-      <span class="textstyle20"> </span>
-      <span class="textstyle18">Us</span>
+      <span class="textstyle18"><a href="about_us.html">About</a></span>
+      <span class="textstyle20"><a href="about_us.html"> </a></span>
+      <span class="textstyle18"><a href="about_us.html">Us</a></span>
       </div>
     </div>
   <div id="button_2cec44a1">

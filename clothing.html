@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="generator" content="RocketCake">
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="rc_images/rc_global.css?h=549dc58c">
+	<link rel="stylesheet" type="text/css" href="rc_images/rc_global.css?h=f842915f">
 </head>
 <body class="body_clothing_html">
 <div class="textstyle1">
-<div id="html_218b9b00"><!-- RocketCake Friendly Navigation Menu -->
+<div id="container_60dba8b2"><div id="container_60dba8b2_padding" ><div class="textstyle1"><img src="rc_images/luxe.gif" width="800" height="800" id="img_274cbdb6" alt="" title="" /><div id="html_218b9b00"><!-- RocketCake Friendly Navigation Menu -->
 <style>
   .auravene-nav {
     display: flex;
@@ -21,11 +21,7 @@
     border-bottom: 1px solid #f0f0f0;
   }
 
-  .nav-logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-  }
+
 
   .nav-links {
     list-style: none;
@@ -74,7 +70,7 @@
 </style>
 
 <div class="auravene-nav">
-  <div class="nav-logo">Auravene</div>
+  <div class="nav-logo"></div>
 
   <ul class="nav-links">
     <li><a href="index.html" >Home</a></li>
@@ -90,7 +86,130 @@
     </div>
   </div>
 </div></div>
-<div id="container_149e2e75"><div id="container_149e2e75_padding" ><div class="textstyle1">  <div id="text_6b0a0558">
+<div id="html_63efa2b7"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* Reset basic */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fffff;
+}
+
+/* Screen reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* BUTTON */
+#menuBtn {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#menuBtn span {
+  flex: 1;
+  margin: 3px 0;
+  background: #333;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+#menuBtn[aria-pressed="true"] span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#menuBtn[aria-pressed="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuBtn[aria-pressed="true"] span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* MENU */
+#menu {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  width: 160px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#menu a:hover {
+  background: #f2f2f2;
+}
+
+/* SHOW MENU */
+#menuBtn[aria-pressed="true"] + #menu {
+  display: flex;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<button id="menuBtn" aria-pressed="false">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span class="sr-only">Toggle Menu</span>
+</button>
+
+<!-- NAVIGATION -->
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="clothing.html">Clothing</a>
+  <a href="about_us.html">About Us</a>
+</nav>
+
+
+
+<script>
+const btn = document.getElementById("menuBtn");
+
+btn.addEventListener("click", () => {
+  const isPressed = btn.getAttribute("aria-pressed") === "true";
+  btn.setAttribute("aria-pressed", !isPressed);
+});
+</script>
+
+</body>
+</html></div>
+</div>
+<div style="clear:both"></div></div></div><div id="container_149e2e75"><div id="container_149e2e75_padding" ><div class="textstyle1">  <div id="text_6b0a0558">
     <div class="textstyle1">
       <span class="textstyle21">Home</span>
       </div>
@@ -1158,7 +1277,7 @@ nav {
 
 <style/></div>
 </div>
-<div style="clear:both"></div></div></div><div id="container_64589801"><div id="container_64589801_padding" ><div class="textstyle1">  <div id="text_52bab2b0">
+<div style="clear:both"></div></div></div><div id="container_49b26a41"><div id="container_49b26a41_padding" ><div class="textstyle1"><div id="container_64589801"><div id="container_64589801_padding" ><div class="textstyle1">  <div id="text_52bab2b0">
     <div class="textstyle1">
       <span class="textstyle20">AURAVENE</span>
       </div>
@@ -1211,128 +1330,7 @@ nav {
       </div>
     </div>
 </div>
-<div style="clear:both"></div></div></div><div id="html_63efa2b7"><!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>My Website</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-/* Reset basic */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fffff;
-}
-
-/* Screen reader */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* BUTTON */
-#menuBtn {
-  width: 70px;
-  height: 70px;
-  background: white;
-  border: 1px solid #aaa;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  cursor: pointer;
-  margin: 20px;
-}
-
-#menuBtn span {
-  flex: 1;
-  margin: 3px 0;
-  background: #333;
-  transition: 0.3s;
-}
-
-/* ANIMATION */
-#menuBtn[aria-pressed="true"] span:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
-}
-
-#menuBtn[aria-pressed="true"] span:nth-child(2) {
-  opacity: 0;
-}
-
-#menuBtn[aria-pressed="true"] span:nth-child(3) {
-  transform: translateY(-10px) rotate(-45deg);
-}
-
-/* MENU */
-#menu {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  display: none;
-  flex-direction: column;
-  width: 160px;
-}
-
-#menu a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-#menu a:hover {
-  background: #f2f2f2;
-}
-
-/* SHOW MENU */
-#menuBtn[aria-pressed="true"] + #menu {
-  display: flex;
-}
-
-
-</style>
-</head>
-
-<body>
-
-<!-- MENU BUTTON -->
-<button id="menuBtn" aria-pressed="false">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span class="sr-only">Toggle Menu</span>
-</button>
-
-<!-- NAVIGATION -->
-<nav id="menu">
-  <a href="index.html">Home</a>
-  <a href="clothing.html">Clothing</a>
-  <a href="about_us.html">About Us</a>
-</nav>
-
-
-
-<script>
-const btn = document.getElementById("menuBtn");
-
-btn.addEventListener("click", () => {
-  const isPressed = btn.getAttribute("aria-pressed") === "true";
-  btn.setAttribute("aria-pressed", !isPressed);
-});
-</script>
-
-</body>
-</html></div>
-  </div>
+<div style="clear:both"></div></div></div></div>
+<div style="clear:both"></div></div></div>  </div>
 </body>
 </html>
