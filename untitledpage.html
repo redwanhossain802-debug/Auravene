@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="generator" content="RocketCake">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="rc_images/rc_global.css?h=091c20bb">
+</head>
+<body class="body_untitledpage_html">
+<div class="textstyle1">
+<div id="html_7b158426"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* Reset basic */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* Screen reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* BUTTON */
+#menuBtn {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+#menuBtn span {
+  flex: 1;
+  margin: 3px 0;
+  background: #333;
+  transition: 0.3s;
+}
+
+/* ANIMATION */
+#menuBtn[aria-pressed="true"] span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#menuBtn[aria-pressed="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+#menuBtn[aria-pressed="true"] span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* MENU */
+#menu {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  width: 160px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#menu a:hover {
+  background: #f2f2f2;
+}
+
+/* SHOW MENU */
+#menuBtn[aria-pressed="true"] + #menu {
+  display: flex;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU BUTTON -->
+<button id="menuBtn" aria-pressed="false">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span class="sr-only">Toggle Menu</span>
+</button>
+
+<!-- NAVIGATION -->
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="clothing.html">Clothing</a>
+  <a href="about_us.html">About Us</a>
+</nav>
+
+
+
+<script>
+const btn = document.getElementById("menuBtn");
+
+btn.addEventListener("click", () => {
+  const isPressed = btn.getAttribute("aria-pressed") === "true";
+  btn.setAttribute("aria-pressed", !isPressed);
+});
+</script>
+
+</body>
+</html></div>
+<div id="html_743390a2"><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Accessibility Feature</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* ===== BASIC PAGE ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== FLOATING BUTTON ===== */
+.fab-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Main button */
+#mainBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Hidden menu */
+#fabMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 70px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: 0.3s;
+}
+
+/* Show animation */
+#fabMenu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Small buttons */
+#fabMenu button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ===== ACCESSIBILITY FEATURES ===== */
+
+/* Bigger text */
+.large-text {
+  font-size: 1.3em;
+}
+
+/* High contrast */
+.high-contrast {
+  background: black;
+  color: white;
+}
+
+.high-contrast a {
+  color: yellow;
+}
+
+/* Dyslexia-friendly */
+.dyslexia-font {
+  font-family: Arial, Verdana, sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Accessibility Button -->
+<div class="fab-container">
+
+  <!-- Main button -->
+  <button id="mainBtn" onclick="toggleMenu()">♿</button>
+
+  <!-- Hidden buttons -->
+  <div id="fabMenu">
+    <button onclick="toggleTextSize()" title="Increase Text">A+</button>
+    <button onclick="toggleContrast()" title="High Contrast">🌓</button>
+    <button onclick="toggleDyslexia()" title="Easy Read">📖</button>
+  </div>
+
+</div>
+
+<script>
+
+/* Toggle floating menu */
+function toggleMenu() {
+  document.getElementById("fabMenu").classList.toggle("active");
+}
+
+/* Accessibility features */
+function toggleTextSize() {
+  document.body.classList.toggle("large-text");
+}
+
+function toggleContrast() {
+  document.body.classList.toggle("high-contrast");
+}
+
+function toggleDyslexia() {
+  document.body.classList.toggle("dyslexia-font");
+}
+
+</script>
+
+</body>
+</html></div>
+<div id="html_14f6314d"><div style="text-align: center;">
+    <img src="Luxe.mp4" alt="Animated Logo" style="max-width: 100%; height: auto;">
+</div></div>
+  </div>
+</body>
+</html>
